@@ -30,6 +30,7 @@
   <script src="js/popper.min.js"></script>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" />
 
+  <link rel="stylesheet" href="{% static '/css/landing.css' %}">
   <link rel="stylesheet" href="{% static '/css/master.css' %}">
   <link rel="stylesheet" href="{% static '/css/styles.css' %}">
   <link rel="stylesheet" href="{% static '/css/font-awesome.min.css' %}">
@@ -54,80 +55,6 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'Appunte:index' %}"> <i class="fa fa-home" style="margin-right: 5px;"></i> Inicio</a>
           </li>
-
-          <!-- MASCOTAS  (TODOS) -->
-          {% if user.rol == 'cliente' %}
-          <li class="nav-item">
-            <a class="nav-link" href="#"> <i class="fa fa-list" style="margin-right: 5px;"></i>Mascotas</a>
-          </li>
-          {% else %}
-          {% endif %}
-          {% if user.rol == 'medico' %}
-          <li class="nav-item">
-            <a class="nav-link" href="#"> <i class="fa fa-list" style="margin-right: 5px;"></i>Mascotas</a>
-          </li>
-          {% else %}
-          {% endif %}
-          {% if user.rol == 'admin' %}
-          <li class="nav-item">
-            <a class="nav-link" href="#"> <i class="fa fa-list" style="margin-right: 5px;"></i>Mascotas</a>
-          </li>
-          {% else %}
-          {% endif %}
-
-          <!-- DIAGNÓSTICOS  (TODOS) -->
-          {% if user.rol == 'cliente' %}
-          <li class="nav-item">
-            <a class="nav-link" href="#"> <i class="fa fa-th" style="margin-right: 5px;"></i>Diagnósticos</a>
-          </li>
-          {% else %}
-          {% endif %}
-          {% if user.rol == 'medico' %}
-          <li class="nav-item">
-            <a class="nav-link" href="#"> <i class="fa fa-th" style="margin-right: 5px;"></i>Diagnósticos</a>
-          </li>
-          {% else %}
-          {% endif %}
-          {% if user.rol == 'admin' %}
-          <li class="nav-item">
-            <a class="nav-link" href="#"> <i class="fa fa-th" style="margin-right: 5px;"></i>Diagnósticos</a>
-          </li>
-          {% else %}
-          {% endif %}
-
-          <!-- MÉDICOS  (M & A) -->
-          {% if user.rol == 'medico' %}
-          <li class="nav-item">
-            <a class="nav-link" href="#"> <i class="fa fa-user-md" style="margin-right: 5px;"></i>Médicos</a>
-          </li>
-          {% else %}
-          {% endif %}
-          {% if user.rol == 'admin' %}
-          <li class="nav-item">
-            <a class="nav-link" href="#"> <i class="fa fa-user-md" style="margin-right: 5px;"></i>Médicos</a>
-          </li>
-          {% else %}
-          {% endif %}
-
-          <!-- CLÍNICA  (TODOS) -->
-          {% if user.rol == 'cliente' %}
-          <li class="nav-item">
-            <a class="nav-link" href="#"> <i class="fa fa-building" style="margin-right: 5px;"></i>Clínica</a>
-          </li>
-          {% else %}
-          {% endif %}
-          {% if user.rol == 'medico' %}
-          <li class="nav-item">
-            <a class="nav-link" href="#"> <i class="fa fa-building" style="margin-right: 5px;"></i>Clínica</a>
-          </li>
-          {% else %}
-          {% endif %}
-          {% if user.rol == 'admin' %}
-          <li class="nav-item">
-            <a class="nav-link" href="#"> <i class="fa fa-building" style="margin-right: 5px;"></i>Clínica</a>
-          </li>
-          {% else %}
-          {% endif %}
 
         {% else %}
           <!-- EN CASO DE NO TENER SESIÓN ACTIVA -->
@@ -163,6 +90,7 @@
 
   {% block content %}
 
+  
   {% endblock %}
 
 

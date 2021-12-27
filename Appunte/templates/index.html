@@ -2,94 +2,150 @@
 
 {% block content %}
 
-<header class="masthead text-white text-center hola">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-9 mx-auto">
-          <h1 class="mb-5">Bienvenido a Appunte</h1>
-          <h3 class="mb-5">Ingresa tu mail y registrate </h3>
-        </div>
-        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-          <form>
-            <div class="form-row">
-              <div class="col-12 col-md-9 mb-2 mb-md-0">
-                <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
+<div class="background-landing">
+  <div class="prehome-video-content-top hidden-xs">
+    <div class="col-md-1 col-md-offset-0">
+      
+    </div>
+    <div class="session-menu header-session pull-right">
+      <a href="#" data-toggle="modal" data-target="#modal_enter" class="btn-enter-session">Iniciar Sesión</a>
+      <a href="#" data-toggle="modal" data-target="#modal_regis">Regístrate</a>
+    </div>
+  </div>
+
+  <div class="prehome-video-content">
+    <div class="col-md-4 col-md-offset-1 text-home">
+    
+      APP<small>UNTE</small>
+      <p><b>Descubre la nueva forma de estudiar!</b>
+        Regístrate o inicia sesión y prepárate para tus exámenes.
+        <span>Puedes utilizarlo en tu celular también.</span>
+        <a href="http://play.google.com/store/apps/details?id=com.ionicbyrequest.appunte" target="_blank" class="default-blue-button">Android</a>
+        <a href="https://itunes.apple.com/cl/app/appunte/id1182837147?mt=8" target="_blank" class="default-blue-button">IOS</a>
+      </p>
+    </div>
+    <div class="col-md-5 col-md-offset-0">
+      
+    </div>
+  </div>
+</div>
+
+<div class="prehome-video-content-bottom visible-xs">
+  <div class="col-md-6 margin-top-2">
+    Visita nuestro canal en <a href="https://www.youtube.com/channel/UCmLwU-OQUX5qTTSk0SquTpw"><b>YOUTUBE</b></a>
+  </div>
+  <div class="col-md-6 margin-top-1">
+   
+      Siguenos en
+      <a href="https://www.facebook.com/appunte/" target="_blank"></a>
+      <a href="https://www.instagram.com/appunte.cl/" target="_blank"></a>
+    
+  </div>
+</div>
+
+<div class="prehome-video-content-bottom hidden-xs">
+  <footer>
+    <div class="flex-container space-around full-height">
+      <div class="col-md-4 col-sm-12  border-black-right col-md-offset-1 visit-our-channel" style="border-right:1px solid rgba(0,0,0,1)">
+        <p>
+          VISITA NUESTRO CANAL EN
+          <a href="https://www.youtube.com/channel/UCmLwU-OQUX5qTTSk0SquTpw"><b>YOUTUBE</b></a>
+        </p>
+      </div>
+      <div class="col-md-4 col-md-offset-0 social" style="margin-left:0px;border-right:0px;">
+        <div class="flex-container space-around full-height">
+						<span>
+              <div class="col-md-7">
+                <span>SÍGUENOS EN</span>
               </div>
-              <div class="col-12 col-md-3">
-                <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
+              <div class="col-md-2 col-xs-4 col-md-offset-0 fb-icon ">
+                  <a href="https://www.facebook.com/appunte/" target="_blank"> </a>
+              </div>
+                <div class="col-md-2 col-xs-4">
+                <a href="https://www.instagram.com/appunte.cl/" target="_blank">
+            
+                </a>
+              </div>
+              <div class="col-md-1 col-xs-2">
+                <a href="https://www.twitter.com/appunte/" target="_blank">
+                  
+                </a>
+              </div>
+              </p>
+						</span>
+        </div>
+      </div>
+      <div class="col-md-4 stores">
+        <div class="flex-container space-around">
+
+          <div class="col-md-1"></div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+</div>
+
+<!-- ENTER modal -->
+<div id="modal_enter" class="modal fade modal-session" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+
+      <div class="modal-header text-center" style="padding-bottom: 0px;">
+
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+             width="182.353px" height="172.548px" viewBox="0 0 182.353 172.548" enable-background="new 0 0 182.353 172.548"
+             xml:space="preserve">
+          <g>
+            <polygon fill="#8F908F" points="62.378,37.049 38.161,57.838 56.163,82.056 50.27,98.129 90.882,152.782 	"/>
+            <polygon fill="#4891CE" points="62.378,37.049 82.284,47.979 67.501,57.844 	"/>
+            <polygon fill="#3168B2" points="82.284,47.979 67.938,59.624 67.501,57.844 	"/>
+            <polygon fill="#8F908F" points="119.388,37.049 143.604,57.838 125.603,82.056 131.497,98.129 90.882,152.782 	"/>
+            <polygon fill="#4891CE" points="119.388,37.049 99.481,47.979 114.265,57.844 	"/>
+            <polygon fill="#3168B2" points="99.481,47.979 113.827,59.624 114.265,57.844 	"/>
+            <polygon fill="#EF3A37" points="90.882,65.861 96.79,65.861 104.224,53.525 97.956,48.583 90.882,48.583 83.81,48.583
+						77.542,53.525 84.976,65.861 	"/>
+            <polygon fill="#EF3A37" points="90.882,152.782 78.581,102.832 84.976,67.227 90.882,67.227 96.79,67.227 103.185,102.832 	"/>
+            <path fill="#EE3332" d="M84.976,65.902c0,0,1.527-2.492,5.947-2.492s5.867,2.492,5.867,2.492H84.976z"/>
+            <path fill="#EE3332" d="M81.856,116.132c0,0,4.098,9.043,9.025,9.043c4.93,0,9.027-9.043,9.027-9.043l-9.027,36.65L81.856,116.132z
+						"/>
+          </g>
+        </svg>
+        <h3 class="font-weight-300"> ¡BIENVENIDO! </h3>
+      </div>
+
+     
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <div class="form-group">
+                
+                </div>
+                <div class="form-group" style="margin-bottom: 0px;">
+                  
+                  <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#myModalRecover">¿Olvidaste tu
+                    contraseña?</a>
+                </div>
+                <br>
+                  <button type="submit" class="btn default-button" id="login-submit">Entrar</button>
+                
               </div>
             </div>
-          </form>
-        </div>
-      </div>
+          </div>
+          <br><br>
+          <div class="modal-footer">
+          
+              <a class="btn fb-button" href="#">Conéctate con Facebook</a>
+           
+          </div>
+     
     </div>
-  </header>
+  </div>
+</div>
 
-
-  <section class="features-icons backg text-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-            <div class="features-icons-icon d-flex">
-              <i class="fas fa-dog m-auto text-primary"></i>
-            </div>
-            <h3>Veterinarios</h3>
-            <p class="lead mb-0">Almacena toda la informacion de tu veterinario de manera 100% digital</p>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-            <div class="features-icons-icon d-flex">
-              <i class="fas fa-cat m-auto text-primary"></i>
-            </div>
-            <h3>Mascotas</h3>
-            <p class="lead mb-0">Revisa toda la informacion historica de tu mascota con unos pocos clicks </p>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-            <div class="features-icons-icon d-flex">
-              <i class="fas fa-crow m-auto text-primary"></i>
-            </div>
-            <h3>Informacion</h3>
-            <p class="lead mb-0">Revisa nuestro foro donde encontraras toda la informacion que necesitas para el cuodado de tu mascota</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="testimonials text-center bg-light">
-    <div class="container" style="padding-bottom:150px;">
-      <h2 class="mb-5"> - Opiniones de Usarios -</h2>
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="img-fluid rounded-circle mb-3" src="/static/img/testimonials-1.jpg" alt="">
-            <h5>Margaret E.</h5>
-            <p class="font-weight-light mb-0">"Excelente para la gestión de mi Clinica Veterinaria"</p>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="img-fluid rounded-circle mb-3" src="/static/img/testimonials-2.jpg" alt="">
-            <h5>Fred S.</h5>
-            <p class="font-weight-light mb-0">"Me permite almacenar todo el historial de mi mascota"</p>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="img-fluid rounded-circle mb-3" src="/static/img/testimonials-3.jpg" alt="">
-            <h5>Sarah W.</h5>
-            <p class="font-weight-light mb-0">"Estaba buscando una web como ésta"</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
 
 
