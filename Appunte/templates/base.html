@@ -72,11 +72,11 @@
             <a class="nav-link" style="padding-right: 30px;" href="#"> <i class="fa fa-user" style="margin-right: 5px;"></i>{{user.email}} - {{user.rol}}</a>
         </li>
         <li class="nav-item borde-right">
-            <a class="nav-link" style="padding-right: 30px;" href="#"> <i class="fa fa-sign-out" style="margin-right: 5px;"></i>Salir</a>
+            <a class="nav-link" style="padding-right: 30px;" href="{% url 'Appunte:salir' %}"> <i class="fa fa-sign-out" style="margin-right: 5px;"></i>Salir</a>
         </li>
         {% else %}
         <li class="nav-item borde-right">
-          <a class="nav-link" style="padding-right: 30px;" href="#"> <i class="fa fa-sign-in" style="margin-right: 5px;"></i>Iniciar sesión</a>
+          <a class="nav-link" style="padding-right: 30px;" href="{% url 'login' %}"> <i class="fa fa-sign-in" style="margin-right: 5px;"></i>Iniciar sesión</a>
         </li>
         {% endif %}
       </ul>
