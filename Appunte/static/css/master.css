@@ -13,6 +13,10 @@ body {
     font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700;
   }
+
+  .background-course {
+    background: rgb(127, 130, 133) !important;
+}
   
   .background-landing {
     background: rgba(25, 90, 144, 1);

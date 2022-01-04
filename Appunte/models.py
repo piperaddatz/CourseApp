@@ -23,3 +23,19 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.email
+
+
+
+# CURSO
+class Course(models.Model):
+    name = models.CharField(max_length=100) 
+    description = models.CharField(max_length=5000) 
+    teacher =  models.CharField(max_length=100) 
+    is_pay = models.BooleanField(default=False)
+    price = models.CharField(max_length=15)
+    published = models.BooleanField(default=False)
+    course_pic = models.ImageField(upload_to='course_profile',blank=True) 
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self): 
+        return self.name

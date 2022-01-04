@@ -12,40 +12,7 @@
     width: 100%;
 }
 
-.prehome-video-content-bottom {
-    position: absolute;
-    top: 94%;
-    left: 0;
-    right: 0;
-    width: 100%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-    background: transparent;
-    height: 15%;
-}
-
-#footer p {
-      margin: 0px;
-      font-family: "Whitney HTF Book";
-      color: #777;
-      text-align: center;
-      position: absolute;
-      top: 50%;
-      left: 37%;
-      margin-top: 10px;
-      transform: translate(-50%, -50%);
-    }
-
-.border-blue-right {
-    padding-right: 10px;
-    border-right: 1px solid rgba(25, 90, 144, 0.6);
-}
-
-.border-blue-right b {
-          font-family: 'Whitney HTF Semibold';
-          font-weight: 200;
+.background-course {
+    background: rgb(127, 130, 133) !important;
 }
        

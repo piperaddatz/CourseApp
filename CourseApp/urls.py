@@ -24,8 +24,8 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('', include('Appunte.urls')),
+    path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('courses/list/', auth_views.LoginView.as_view(template_name='registration/login.html'), name='login'),
-]
+    path('accounts/login/', auth_views.LoginView.as_view(template_name='registration/login.html'), name='login'),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
