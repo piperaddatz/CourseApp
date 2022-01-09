@@ -1,6 +1,6 @@
 from django.contrib.auth.base_user import BaseUserManager
-from django.utils.translation import ugettext_lazy as _
-
+from django.utils.translation import gettext_lazy as _
+# https://stackoverflow.com/questions/57098515/python-with-django-import-error-with-registrationsupplementbase-cannot-import-na
 
 class CustomUserManager(BaseUserManager):
     """
