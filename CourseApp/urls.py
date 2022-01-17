@@ -28,4 +28,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/login/', auth_views.LoginView.as_view(template_name='registration/login.html'), name='login'),
+    path('accounts/register/', auth_views.LoginView.as_view(template_name='registration/register.html'), name='register'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

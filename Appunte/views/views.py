@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 from django import forms
-from ..forms import CourseForm
+from ..forms import CourseForm, CustomUserCreationForm, RegistrationForm
 from ..models import Course
+from ..managers import CustomUserManager
 
 from django.contrib.auth.models import User
 from django.contrib.auth import logout
@@ -24,6 +25,20 @@ def salir(request):
     logout(request)
     # Redirect to a success page.
     return redirect('/')    
+
+
+def register(request):
+    if request.method == 'POST':
+        form = CustomUserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('cursos/lista')
+  #  else:
+  #      form = RegistrationForm()
+  #      args = {'form': form}
+  #      return redirect('registration/register.html') 
+
+
 
 
 

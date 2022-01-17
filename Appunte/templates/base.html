@@ -76,6 +76,9 @@
         </li>
         {% else %}
         <li class="nav-item borde-right">
+          <a class="nav-link" style="padding-right: 30px;" href="{% url 'register' %}"> <i class="fa fa-sign-in" style="margin-right: 5px;"></i>Registrate</a>
+        </li>
+        <li class="nav-item borde-right">
           <a class="nav-link" style="padding-right: 30px;" href="{% url 'login' %}"> <i class="fa fa-sign-in" style="margin-right: 5px;"></i>Iniciar sesión</a>
         </li>
         {% endif %}
