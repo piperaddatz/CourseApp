@@ -29,14 +29,14 @@ def salir(request):
 
 def register(request):
     if request.method == 'POST':
-        form = CustomUserCreationForm(request.POST)
+        form = RegistrationForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('cursos/lista')
-  #  else:
-  #      form = RegistrationForm()
-  #      args = {'form': form}
-  #      return redirect('registration/register.html') 
+            return redirect('/')
+    
+    form = RegistrationForm()
+    args = {'form': form}
+    return render(request, 'registration/register.html', {}) 
 
 
 
