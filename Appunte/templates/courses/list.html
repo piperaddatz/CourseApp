@@ -11,8 +11,8 @@
 
             {% for course in courses %}
                 <div class="card m-2" style="width: 18rem;">
-                    {% if course.course_pic %}
-                        <img src="{{ course.course_pic.url }}" class="card-img-top" width="140" height="180"
+                    {% if course.picture %}
+                        <img src="{{ course.picture.url }}" class="card-img-top" width="140" height="180"
                              alt="Card image cap">
                     {% else %}
                     {% endif %}

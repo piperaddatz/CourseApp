@@ -2,16 +2,15 @@ from django.urls import path
 
 from .views import views
 
-app_name = 'Appunte'
-
+# Endpoints
 urlpatterns = [
-    # INICIO
-    path(r'', views.index, name="index"),
+    # Index
+    path('', views.index, name="index"),
 
-    # PERFIL
+    # Perfil
     path('accounts/profile/', views.perfil_usuario, name='perfil'),
     path('accounts/salir/', views.salir, name='salir'),
 
-    # COURSE
+    # Cursos
     path('cursos/lista', views.coursesList, name="course-list"),
 ]

@@ -1,24 +1,24 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 
-from .models import CustomUser, Course
+from .models import User, Course
 
 
 class CustomUserCreationForm(UserCreationForm):
     class Meta(UserCreationForm):
-        model = CustomUser
+        model = User
         fields = ('email', 'username')
 
 
 class CustomUserChangeForm(UserChangeForm):
     class Meta:
-        model = CustomUser
+        model = User
         fields = ('email', 'username', 'rol')
 
 
 class RegistrationForm(forms.Form):
     class Meta:
-        model = CustomUser
+        model = User
         fields = ('email', 'username', 'password')
 
     def __init__(self, *args, **kwargs):
@@ -40,7 +40,7 @@ class RegistrationForm(forms.Form):
     def clean_username(self):
         cleaned_data = super(RegistrationForm, self).clean()
         username = cleaned_data['username']
-        if CustomUser.objects.filter(username=username):
+        if User.users.filter(username=username):
             self.add_error(
                 'username',
                 forms.ValidationError("User Exists")
@@ -51,7 +51,7 @@ class RegistrationForm(forms.Form):
     def clean_email(self):
         cleaned_data = super(RegistrationForm, self).clean()
         email = cleaned_data['email']
-        if CustomUser.objects.filter(email=email):
+        if User.users.filter(email=email):
             self.add_error(
                 'email',
                 forms.ValidationError(
@@ -70,7 +70,7 @@ class RegistrationForm(forms.Form):
             'email': cleaned_data['email'],
             'username': cleaned_data['username'],
         }
-        user = CustomUser(**user_data)
+        user = User(**user_data)
         user.set_password(cleaned_data['password'])
         user.save()
 
@@ -80,4 +80,4 @@ class RegistrationForm(forms.Form):
 class CourseForm(forms.ModelForm):
     class Meta:
         model = Course
-        fields = ('name', 'description', 'teacher', 'is_pay', 'price', 'published', 'course_pic')
+        fields = ('name', 'description', 'teacher', 'price', 'is_published', 'picture')
