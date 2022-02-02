@@ -1,27 +1,22 @@
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm
-from django.contrib.auth.models import User
 from django import forms
-from . import models
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+
 from .models import CustomUser, Course
 
 
-
 class CustomUserCreationForm(UserCreationForm):
-
     class Meta(UserCreationForm):
         model = CustomUser
         fields = ('email', 'username')
 
 
 class CustomUserChangeForm(UserChangeForm):
-
     class Meta:
         model = CustomUser
         fields = ('email', 'username', 'rol')
 
 
 class RegistrationForm(forms.Form):
-
     class Meta:
         model = CustomUser
         fields = ('email', 'username', 'password')
@@ -42,7 +37,6 @@ class RegistrationForm(forms.Form):
         label='Contraseña',
     )
 
-
     def clean_username(self):
         cleaned_data = super(RegistrationForm, self).clean()
         username = cleaned_data['username']
@@ -50,7 +44,8 @@ class RegistrationForm(forms.Form):
             self.add_error(
                 'username',
                 forms.ValidationError("User Exists")
-                )
+            )
+
         return username
 
     def clean_email(self):
@@ -60,8 +55,9 @@ class RegistrationForm(forms.Form):
             self.add_error(
                 'email',
                 forms.ValidationError(
-                  "Mail exists")
-                )
+                    "Mail exists")
+            )
+
         return email
 
     def clean(self):
@@ -69,6 +65,7 @@ class RegistrationForm(forms.Form):
 
     def save(self):
         cleaned_data = super(RegistrationForm, self).clean()
+
         user_data = {
             'email': cleaned_data['email'],
             'username': cleaned_data['username'],
@@ -76,11 +73,11 @@ class RegistrationForm(forms.Form):
         user = CustomUser(**user_data)
         user.set_password(cleaned_data['password'])
         user.save()
-        return user
 
+        return user
 
 
 class CourseForm(forms.ModelForm):
     class Meta:
         model = Course
-        fields = ('name', 'description', 'teacher', 'is_pay', 'price', 'published', 'course_pic' )          
+        fields = ('name', 'description', 'teacher', 'is_pay', 'price', 'published', 'course_pic')

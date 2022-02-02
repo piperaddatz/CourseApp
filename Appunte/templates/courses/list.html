@@ -2,30 +2,31 @@
 
 {% block content %}
 
-<div class="background-course">
+    <div class="background-course">
 
-    <h1> Lista de Cursos </h1>
+        <h1> Lista de Cursos </h1>
 
 
-    <div class="row" style="padding-left: 40px; padding-top: 40px;">
+        <div class="row" style="padding-left: 40px; padding-top: 40px;">
 
-        {% for course in courses %}
-        <div class="card m-2" style="width: 18rem;" >
-            {% if course.course_pic %}
-            <img src="{{course.course_pic.url}}"  class="card-img-top" width="140" height="180" alt="Card image cap">
-            {% else %}
-            {% endif %}
-            <div class="card-body">
-            <h5 class="card-title">{{ course.name }}</h5>
-            <p class="card-text">{{ course.description }}</p>
-            <p class="card-text">Profesor: {{ course.teacher }}</p>
-            <a href="#" class="btn btn-primary">Ver Curso</a>
-            </div>
+            {% for course in courses %}
+                <div class="card m-2" style="width: 18rem;">
+                    {% if course.course_pic %}
+                        <img src="{{ course.course_pic.url }}" class="card-img-top" width="140" height="180"
+                             alt="Card image cap">
+                    {% else %}
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ course.name }}</h5>
+                        <p class="card-text">{{ course.description }}</p>
+                        <p class="card-text">Profesor: {{ course.teacher }}</p>
+                        <a href="#" class="btn btn-primary">Ver Curso</a>
+                    </div>
+                </div>
+            {% endfor %}
+
         </div>
-        {% endfor %}
-
     </div>
-</div>
 
 
 

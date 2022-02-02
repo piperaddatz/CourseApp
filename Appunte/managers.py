@@ -1,5 +1,7 @@
 from django.contrib.auth.base_user import BaseUserManager
 from django.utils.translation import gettext_lazy as _
+
+
 # https://stackoverflow.com/questions/57098515/python-with-django-import-error-with-registrationsupplementbase-cannot-import-na
 
 class CustomUserManager(BaseUserManager):
@@ -7,6 +9,7 @@ class CustomUserManager(BaseUserManager):
     Custom user model manager where email is the unique identifiers
     for authentication instead of usernames.
     """
+
     def create_user(self, email, password, **extra_fields):
         """
         Create and save a User with the given email and password.

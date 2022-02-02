@@ -1,13 +1,12 @@
-from django.shortcuts import render, redirect
-from django import forms
-from ..forms import CourseForm, CustomUserCreationForm, RegistrationForm
-from ..models import Course
-from ..managers import CustomUserManager
-
-from django.contrib.auth.models import User
-from django.contrib.auth import logout
 from django.contrib.auth import get_user_model
+from django.contrib.auth import logout
+from django.shortcuts import render, redirect
+
+from ..forms import RegistrationForm
+from ..models import Course
+
 User = get_user_model()
+
 
 # Create your views here.
 
@@ -15,16 +14,16 @@ def index(request):
     return render(request, 'index.html', {})
 
 
-
 ###############    Views de Usuarios
 
-def PerfilUsuario(request):
+def perfil_usuario(request):
     return render(request, 'index.html', {})
+
 
 def salir(request):
     logout(request)
     # Redirect to a success page.
-    return redirect('/')    
+    return redirect('/')
 
 
 def register(request):
@@ -33,13 +32,10 @@ def register(request):
         if form.is_valid():
             form.save()
             return redirect('/')
-    
+
     form = RegistrationForm()
     args = {'form': form}
-    return render(request, 'registration/register.html', {}) 
-
-
-
+    return render(request, 'registration/register.html', {})
 
 
 ###########################     Views of Courses     #######################
@@ -49,9 +45,8 @@ def coursesList(request):
     # if not request.user.is_authenticated:
     #    return redirect('/accounts/login/')
 
-    return render(request, 'courses/list.html', {"courses":courses})
+    return render(request, 'courses/list.html', {"courses": courses})
 
 
 def palmera(request):
-        
-    return render(request, 'palmera.html', {})    
+    return render(request, 'palmera.html', {})
