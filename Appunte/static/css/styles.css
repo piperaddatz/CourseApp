@@ -1,0 +1,311 @@
+body {
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    position: relative;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+
+.background-course {
+    background: rgb(127, 130, 133) !important;
+}
+
+.background-landing {
+    background: rgba(25, 90, 144, 1);
+    background: -moz-linear-gradient(left, rgba(25, 90, 144, 1) 0%, rgba(72, 146, 206, 1) 100%);
+
+    background: -webkit-linear-gradient(left, rgba(25, 90, 144, 1) 0%, rgba(72, 146, 206, 1) 100%);
+    background: -o-linear-gradient(left, rgba(25, 90, 144, 1) 0%, rgba(72, 146, 206, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(25, 90, 144, 1) 0%, rgba(72, 146, 206, 1) 100%);
+    background: linear-gradient(to right, rgba(25, 90, 144, 1) 0%, rgba(72, 146, 206, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#195a90', endColorstr='#4892ce', GradientType=1);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 74%, 0 85%);
+    clip-path: polygon(0 0, 100% 0, 100% 74%, 0 85%);
+    height: 100vh;
+    width: 100%;
+
+}
+
+header.masthead {
+    position: relative;
+    background-color: #343a40;
+    background: url("/static/img/bg-masthead.jpg") no-repeat center center;
+    background-size: cover;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+header.masthead .overlay {
+    position: absolute;
+    background-color: #212529;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+}
+
+header.masthead h1 {
+    font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+    header.masthead {
+        padding-top: 12rem;
+        padding-bottom: 12rem;
+    }
+
+    header.masthead h1 {
+        font-size: 3rem;
+    }
+}
+
+.showcase .showcase-text {
+    padding: 3rem;
+}
+
+.showcase .showcase-img {
+    min-height: 30rem;
+    background-size: cover;
+}
+
+@media (min-width: 768px) {
+    .showcase .showcase-text {
+        padding: 7rem;
+    }
+}
+
+.features-icons {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.features-icons .features-icons-item {
+    max-width: 20rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon {
+    height: 7rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon i {
+    font-size: 4.5rem;
+}
+
+.features-icons .features-icons-item:hover .features-icons-icon i {
+    font-size: 5rem;
+}
+
+.testimonials {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.testimonials .testimonial-item {
+    max-width: 18rem;
+}
+
+.testimonials .testimonial-item img {
+    max-width: 12rem;
+    box-shadow: 0px 5px 5px 0px #adb5bd;
+}
+
+.call-to-action {
+    position: relative;
+    background-color: #343a40;
+    background: url("../img/bg-masthead.jpg") no-repeat center center;
+    background-size: cover;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.call-to-action .overlay {
+    position: absolute;
+    background-color: #212529;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+}
+
+
+footer.footer {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+
+
+}
+
+.backg {
+    background-color: #E5E4E2;
+}
+
+
+.framework {
+    min-height: 80%;
+}
+
+.radio {
+    border-radius: 50%;
+}
+
+.user-card-full {
+    overflow: hidden
+}
+
+.card {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+    box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+    border: none;
+    margin-bottom: 30px
+}
+
+.m-r-0 {
+    margin-right: 0px
+}
+
+.m-l-0 {
+    margin-left: 0px
+}
+
+
+.emp-profile {
+    padding: 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 0.5rem;
+    background: #fff;
+}
+
+.profile-img {
+    text-align: center;
+}
+
+.profile-img img {
+    width: 70%;
+    height: 100%;
+}
+
+.profile-img .file {
+    position: relative;
+    overflow: hidden;
+    margin-top: -20%;
+    width: 70%;
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+    background: #212529b8;
+}
+
+.profile-img .file input {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+
+.profile-head h5 {
+    color: #333;
+}
+
+.profile-head h6 {
+    color: #0062cc;
+}
+
+.profile-edit-btn {
+    border: none;
+    border-radius: 1.5rem;
+    width: 70%;
+    padding: 2%;
+    font-weight: 600;
+    color: #6c757d;
+    cursor: pointer;
+}
+
+.proile-rating {
+    font-size: 12px;
+    color: #818182;
+    margin-top: 5%;
+}
+
+.proile-rating span {
+    color: #495057;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.profile-head .nav-tabs {
+    margin-bottom: 5%;
+}
+
+.profile-head .nav-tabs .nav-link {
+    font-weight: 600;
+    border: none;
+}
+
+.profile-head .nav-tabs .nav-link.active {
+    border: none;
+    border-bottom: 2px solid #0062cc;
+}
+
+.profile-work {
+    padding: 14%;
+    margin-top: -15%;
+}
+
+.profile-work p {
+    font-size: 12px;
+    color: #818182;
+    font-weight: 600;
+    margin-top: 10%;
+}
+
+.profile-work a {
+    text-decoration: none;
+    color: #495057;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.profile-work ul {
+    list-style: none;
+}
+
+.profile-tab label {
+    font-weight: 600;
+}
+
+.profile-tab p {
+    font-weight: 600;
+    color: #0062cc;
+}
+
+.background-landing {
+    background: rgba(25, 90, 144, 1);
+    background: -moz-linear-gradient(left, rgba(25, 90, 144, 1) 0%, rgba(72, 146, 206, 1) 100%);
+    background: -o-linear-gradient(left, rgba(25, 90, 144, 1) 0%, rgba(72, 146, 206, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(25, 90, 144, 1) 0%, rgba(72, 146, 206, 1) 100%);
+    background: linear-gradient(to right, rgba(25, 90, 144, 1) 0%, rgba(72, 146, 206, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#195a90', endColorstr='#4892ce', GradientType=1);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 74%, 0 85%);
+    clip-path: polygon(0 0, 100% 0, 100% 74%, 0 85%);
+    height: 100vh;
+    width: 100%;
+}
+
+.background-course {
+    background: rgb(127, 130, 133) !important;
+}
