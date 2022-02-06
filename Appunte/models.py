@@ -39,3 +39,42 @@ class Course(models.Model):
 
     def __str__(self): 
         return self.name
+
+
+# Topic
+class Topic(models.Model):
+    course = models.ForeignKey(Course, on_delete=models.CASCADE) 
+    name = models.CharField(max_length=1000) 
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self): 
+        return self.name        
+
+
+# Subtopic
+class Subtopic(models.Model):
+    topic = models.ForeignKey(Topic, on_delete=models.CASCADE) 
+    name = models.CharField(max_length=1000) 
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self): 
+        return self.name   
+
+
+class Question(models.Model):
+    subtopic = models.ForeignKey(Subtopic, on_delete=models.CASCADE) 
+    sort = models.IntegerField()
+    content = models.TextField() 
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self): 
+        return self.content   
+
+
+class Answer(models.Model):
+    answer = models.ForeignKey(Question, on_delete=models.CASCADE) 
+    content = models.TextField() 
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self): 
+        return self.content                      

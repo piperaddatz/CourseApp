@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+    <h1> Contenido del Curso </h1>
+
+        {% for topic in topics %}
+        <a href="{% url 'Appunte:subtopic-list' topic.id %}">{{ topic.name }}</a>
+            <h5></h5>
+
+        {% endfor %}
+
+
+
+
+
+{% endblock %}

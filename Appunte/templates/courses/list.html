@@ -19,7 +19,7 @@
             <h5 class="card-title">{{ course.name }}</h5>
             <p class="card-text">{{ course.description }}</p>
             <p class="card-text">Profesor: {{ course.teacher }}</p>
-            <a href="#" class="btn btn-primary">Ver Curso</a>
+            <a href="{% url 'Appunte:topic-list' course.id %}" class="btn btn-primary">Ver Curso</a>
             </div>
         </div>
         {% endfor %}
