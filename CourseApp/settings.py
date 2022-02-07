@@ -95,6 +95,7 @@ DATABASES = {
 # User model
 AUTH_USER_MODEL = 'Appunte.CustomUser'
 
+LOGIN_REDIRECT_URL = '../../cursos/lista'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators

@@ -27,3 +27,7 @@ class CustomUserAdmin(UserAdmin):
 
 admin.site.register(CustomUser, CustomUserAdmin)
 admin.site.register(models.Course)
+admin.site.register(models.Topic)
+admin.site.register(models.Subtopic)
+admin.site.register(models.Question)
+admin.site.register(models.Answer)

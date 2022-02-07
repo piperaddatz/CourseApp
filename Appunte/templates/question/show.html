@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+    <h1> Preguntas </h1>
+
+      
+    {% for question in questions %}
+    
+        {% if question.id == 1 %}
+            <h3>{{ question.content }}</h3>
+        {% else %}
+
+        {% endif %}
+
+    {% endfor %}
+
+
+
+
+
+{% endblock %}
