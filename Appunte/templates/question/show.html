@@ -6,11 +6,16 @@
 
     <h1> Preguntas </h1>
 
-        {% for question in questions %}
+      
+    {% for question in questions %}
+    
+        {% if question.id == 1 %}
+            <h3>{{ question.content }}</h3>
+        {% else %}
 
-            <h5>{{ question.content }}</h5>
+        {% endif %}
 
-        {% endfor %}
+    {% endfor %}
 
 
 

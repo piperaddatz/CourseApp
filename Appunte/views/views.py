@@ -85,7 +85,7 @@ def showQuestion(request, pk):
     if not request.user.is_authenticated:
         return redirect('/accounts/login/')
 
-    return render(request, 'question/show.html', {"questions":questions})       
+    return render(request, 'question/show.html', {"questions":questions} )       
 
 
 
